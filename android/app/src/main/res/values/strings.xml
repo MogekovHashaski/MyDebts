@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyDebts</string>
+  <string name="textview">TextView</string>
+  <string name="add">ADD</string>
 </resources>
