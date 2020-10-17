@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-export default function Header({navigation}) {
+export default function Header({navigation, title}) {
     const openMenu = () => {
         navigation.openDrawer();
     };
@@ -16,7 +16,7 @@ export default function Header({navigation}) {
                 style={styles.icon}
             />
             <View>
-                <Text style={styles.headerText}>MyDebts</Text>
+                <Text style={styles.headerText}>{title}</Text>
             </View>
         </View>
     );

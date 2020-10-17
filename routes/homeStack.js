@@ -9,7 +9,9 @@ const screens = {
         screen: Main,
         navigationOptions: ({navigation}) => {
             return {
-                headerTitle: () => <Header navigation={navigation} />,
+                headerTitle: () => (
+                    <Header navigation={navigation} title="My Debts" />
+                ),
             };
         },
     },
@@ -24,7 +26,7 @@ const screens = {
 const HomeStack = createStackNavigator(screens, {
     defaultNavigationOptions: {
         headerTintColor: '#444',
-        headerStyle: {backgroundColor: '#eee', height: 60},
+        headerStyle: {backgroundColor: 'yellow', height: 60},
     },
 });
 

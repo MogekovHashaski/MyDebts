@@ -8,7 +8,9 @@ const screens = {
         screen: About,
         navigationOptions: ({navigation}) => {
             return {
-                headerTitle: () => <Header navigation={navigation} />,
+                headerTitle: () => (
+                    <Header navigation={navigation} title="About My Debts" />
+                ),
             };
         },
     },
@@ -17,7 +19,7 @@ const screens = {
 const AboutStack = createStackNavigator(screens, {
     defaultNavigationOptions: {
         headerTintColor: '#444',
-        headerStyle: {backgroundColor: '#eee', height: 60},
+        headerStyle: {backgroundColor: 'yellow', height: 60},
     },
 });
 
