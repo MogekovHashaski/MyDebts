@@ -26,6 +26,8 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import Navigator from './routes/drawer';
+import SplashScreen from 'react-native-splash-screen';
+import {useEffect} from 'react';
 
 /*const App: () => React$Node = () => {
     return (
@@ -117,6 +119,12 @@ const styles = StyleSheet.create({
         textAlign: 'right',
     },
 });
+
+const App = () => {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+}
 
 export default function App() {
     return <Navigator />;
