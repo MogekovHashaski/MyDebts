@@ -121,11 +121,13 @@ const styles = StyleSheet.create({
 });
 
 const App = () => {
-  useEffect(() => {
-    SplashScreen.hide();
-  }, []);
-}
+    useEffect(() => {
+        SplashScreen.hide();
+    }, []);
+};
 
-export default function App() {
+export default App();
+
+/*export default function App() {
     return <Navigator />;
-}
+}*/
