@@ -1,34 +1,26 @@
 import {createStackNavigator} from 'react-navigation-stack';
-import Main from '../screens/main';
-import About from '../screens/myDebts';
+import OwesMe from '../screens/owesMe';
 import Header from '../shared/header';
 import React from 'react';
-import {StatusBar} from 'react-native';
 
 const screens = {
-    Main: {
-        screen: Main,
+    About: {
+        screen: OwesMe,
         navigationOptions: ({navigation}) => {
             return {
                 headerTitle: () => (
-                    <Header navigation={navigation} title="Main" />
+                    <Header navigation={navigation} title="Someone owes me" />
                 ),
             };
         },
     },
-    /*About: {
-        screen: About,
-        navigationOptions: {
-            title: 'About MyDebts',
-        },
-    },*/
 };
 
-const HomeStack = createStackNavigator(screens, {
+const OwesMeStack = createStackNavigator(screens, {
     defaultNavigationOptions: {
         headerTintColor: '#444',
         headerStyle: {backgroundColor: '#4CAF50', height: 60},
     },
 });
 
-export default HomeStack;
+export default OwesMeStack;

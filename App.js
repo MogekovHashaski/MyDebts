@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     },
 });
 
-const App: () => React$Node = () =>{
+const App: () => React$Node = () => {
     useEffect(() => {
         SplashScreen.hide();
     }, []);

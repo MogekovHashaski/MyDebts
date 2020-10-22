@@ -29,16 +29,17 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'yellow',
+        backgroundColor: '#4CAF50',
     },
     headerText: {
         fontWeight: 'bold',
         fontSize: 20,
-        color: '#333',
+        color: '#FFFFFF',
         letterSpacing: 1,
     },
     icon: {
         position: 'absolute',
         left: 16,
+        color: '#FFFFFF',
     },
 });

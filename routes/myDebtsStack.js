@@ -1,26 +1,26 @@
 import {createStackNavigator} from 'react-navigation-stack';
-import About from '../screens/about';
+import MyDebts from '../screens/myDebts';
 import Header from '../shared/header';
 import React from 'react';
 
 const screens = {
     About: {
-        screen: About,
+        screen: MyDebts,
         navigationOptions: ({navigation}) => {
             return {
                 headerTitle: () => (
-                    <Header navigation={navigation} title="About My Debts" />
+                    <Header navigation={navigation} title="My Debts" />
                 ),
             };
         },
     },
 };
 
-const AboutStack = createStackNavigator(screens, {
+const MyDebtsStack = createStackNavigator(screens, {
     defaultNavigationOptions: {
         headerTintColor: '#444',
-        headerStyle: {backgroundColor: 'yellow', height: 60},
+        headerStyle: {backgroundColor: '#4CAF50', height: 60},
     },
 });
 
-export default AboutStack;
+export default MyDebtsStack;
