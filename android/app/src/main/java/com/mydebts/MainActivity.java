@@ -63,4 +63,8 @@ public class MainActivity extends ReactActivity {
     SplashScreen.show(this);
     super.onCreate(savedInstanceState);
   }
+
+  protected String getMainComponentName(){
+    return "MyDebts";
+  }
 }

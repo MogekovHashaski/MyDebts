@@ -120,13 +120,14 @@ const styles = StyleSheet.create({
     },
 });
 
-const App = () => {
+const App: () => React$Node = () =>{
     useEffect(() => {
         SplashScreen.hide();
     }, []);
+    return <Navigator />;
 };
 
-export default App();
+export default App;
 
 /*export default function App() {
     return <Navigator />;
