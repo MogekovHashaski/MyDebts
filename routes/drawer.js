@@ -3,6 +3,7 @@ import {createAppContainer} from 'react-navigation';
 import HomeStack from './homeStack';
 import MyDebtsStack from './myDebtsStack';
 import OwesMeStack from './owesMeStack';
+import AddDebtsStack from './addDebtsStack';
 
 const RootDrawerNavigator = createDrawerNavigator({
     Main: {
@@ -21,6 +22,12 @@ const RootDrawerNavigator = createDrawerNavigator({
         screen: OwesMeStack,
         navigationOptions: {
             drawerLabel: 'Someone owes me',
+        },
+    },
+    Add: {
+        screen: AddDebtsStack,
+        navigationOptions: {
+            drawerLabel: 'Add new debts',
         },
     },
 });
