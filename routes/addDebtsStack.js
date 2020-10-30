@@ -6,7 +6,7 @@ import {createStackNavigator} from 'react-navigation-stack';
 const screens = {
     Add: {
         screen: AddDebts,
-        navigationOptions: (navigation) => {
+        navigationOptions: ({navigation}) => {
             return {
                 headerTitle: () => (
                     <Header navigation={navigation} title={'Add new debts'} />
