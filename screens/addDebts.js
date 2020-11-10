@@ -71,16 +71,21 @@ const App = () => {
                         style={{
                             marginTop: 24,
                             marginLeft: 20,
-                            marginRight: 20,
+                            marginRight: 80,
                             height: 50,
                             borderBottomColor: '#000',
                             borderBottomWidth: 1,
+                            width: 200,
                         }}
                         onChangeText={(text) => onChangeText(text)}
                         value={value}
                         placeholder="Sum"
                     />
-                    <Dropdown value={1} data={currency} />
+                    <Dropdown
+                        value={1}
+                        data={currency}
+                        style={{marginLeft: 40}}
+                    />
                 </View>
             </ScrollView>
         </SafeAreaView>
