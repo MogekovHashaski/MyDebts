@@ -6,14 +6,20 @@ import {
     StyleSheet,
     View,
     TextInput,
+    Platform,
+    Button,
 } from 'react-native';
 import React, {useState} from 'react';
 import {Dropdown} from 'react-native-material-dropdown';
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 const App = () => {
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
     const [value, onChangeText] = React.useState('');
+    const [date, setDate] = useState(new Date(1598051730000));
+    const [mode, setMode] = useState('date');
+    const [show, setShow] = useState(false);
     let currency = [
         {
             label: 'RUB',
@@ -41,9 +47,29 @@ const App = () => {
         });
     };*/
 
+    const onChange = (event, selectedDate) => {
+        const currentDate = selectedDate || date;
+        setShow(Platform.OS === 'android');
+        setDate(currentDate);
+    };
+
+    const showMode = (currentMode) => {
+        setShow(true);
+        setMode(currentMode);
+    };
+
+    const showDatepicker = () => {
+        showMode('date');
+    };
+
+    const showTimepicker = () => {
+        showMode('time');
+    };
+
     return (
         <SafeAreaView style={{flex: 1}}>
             <ScrollView style={{flex: 1, flexDirection: 'column'}}>
+                {/*duplication of view style*/}
                 <View style={{flex: 1, flexDirection: 'row'}}>
                     <Switch
                         trackColor={{false: '#767577', true: '#4CAF50'}}
@@ -64,10 +90,32 @@ const App = () => {
                     />
                 </View>
                 <View style={{justifyContent: 'center'}}>
-                    <Text style={styles.text}>Date is not selected</Text>
+                    <View>
+                        <Button
+                            onPress={showDatepicker}
+                            title="Show date picker!"
+                        />
+                    </View>
+                    <View>
+                        <Button
+                            onPress={showTimepicker}
+                            title="Show time picker!"
+                        />
+                    </View>
+                    {show && (
+                        <DateTimePicker
+                            testID="dateTimePicker"
+                            value={date}
+                            mode={mode}
+                            is24Hour={true}
+                            display="default"
+                            onChange={onChange}
+                        />
+                    )}
                 </View>
                 <View style={{flexDirection: 'row', marginTop: 50}}>
                     <TextInput
+                        /*duplicate of textInput style*/
                         style={{
                             marginTop: 24,
                             marginLeft: 20,
