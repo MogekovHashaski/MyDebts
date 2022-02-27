@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/linearLayout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <TextView
+    android:id="@+id/deadLine"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="18dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginRight="80dp"
+    android:layout_marginBottom="73dp"
+    android:text="@string/textview" />
+
+  <TextView
+    android:id="@+id/debts"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="38dp"
+    android:layout_marginRight="80dp"
+    android:layout_marginBottom="45dp"
+    android:text="@string/textview"
+    android:textSize="24sp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="80dp" />
+
+  <TextView
+    android:id="@+id/name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="80dp"
+    android:layout_marginRight="48dp"
+    android:text="@string/textview"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="48dp"
+    tools:ignore="HardcodedText" />
+</FrameLayout>
