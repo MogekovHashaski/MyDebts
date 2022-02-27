@@ -12,6 +12,7 @@ import {
 import React, {useState} from 'react';
 import {Dropdown} from 'react-native-material-dropdown';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const App = () => {
     const [isEnabled, setIsEnabled] = useState(false);
@@ -90,18 +91,18 @@ const App = () => {
                     />
                 </View>
                 <View style={{justifyContent: 'center'}}>
-                    <View>
-                        <Button
-                            onPress={showDatepicker}
-                            title="Show date picker!"
-                        />
+                    <View style={{flexDirection: 'row', marginTop: 50}}>
+                        <Text style={{marginRight: 20}}>
+                            Return until: {date.toString()}
+                        </Text>
+                        <Icon onPress={showDatepicker} name="edit" size={28} />
                     </View>
-                    <View>
+                    {/*<View>
                         <Button
                             onPress={showTimepicker}
                             title="Show time picker!"
                         />
-                    </View>
+                    </View>*/}
                     {show && (
                         <DateTimePicker
                             testID="dateTimePicker"
